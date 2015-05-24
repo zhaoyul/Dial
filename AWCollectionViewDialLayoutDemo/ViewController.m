@@ -116,7 +116,7 @@ static NSString *cellId2 = @"cellId2";
     CGFloat radius = 0 ,angularSpacing  = 0, xOffset = 0;
     
     if(type == 0){
-        [dialLayout setCellSize:CGSizeMake(240, 100)];
+        [dialLayout setCellSize:CGSizeMake(100, 100)];
         [dialLayout setWheelType:WHEELALIGNMENTLEFT];
         
         radius = 300;

@@ -77,7 +77,8 @@
     //float firstItem = fmax(0 , floorf(minY / self.itemHeight) - (90/self.AngularSpacing) );
     //float lastItem = fmin( self.cellCount-1 , floorf(maxY / self.itemHeight) );
 
-    for( int i = firstItem; i <= lastItem; i++ ){
+//    for( int i = firstItem; i <= lastItem; i++ ){
+    for( int i = 0; i <= self.cellCount-1; i++ ){
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [theLayoutAttributes addObject:theAttributes];
