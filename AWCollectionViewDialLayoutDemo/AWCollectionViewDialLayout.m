@@ -115,7 +115,7 @@
     
     
     if( self.wheelType == WHEELALIGNMENTLEFT){
-        scaleFactor = fmax(0.6, 1 - fabs( newIndex *0.25));
+        scaleFactor = fmax(1, 1 - fabs( newIndex *0.25));
         deltaX = self.cellSize.width/2;
         theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset  , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
         translationT =CGAffineTransformMakeTranslation(self.dialRadius + (deltaX*scaleFactor) , 0);
