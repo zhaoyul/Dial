@@ -31,5 +31,10 @@ enum WheelAlignmentType : NSInteger {
 @property (readonly, nonatomic, strong) NSIndexPath *currentIndexPath;
 
 
+@property (nonatomic, assign) CGFloat pinchedCellScale;
+@property (nonatomic, assign) CGPoint pinchedCellCenter;
+@property (nonatomic, strong) NSIndexPath* pinchedCellPath;
+
+
 -(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
 @end

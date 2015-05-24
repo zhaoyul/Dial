@@ -141,7 +141,31 @@
     theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
     theAttributes.zIndex = indexPath.item;
     
+    
+    [self applyPinchToLayoutAttributes:theAttributes];
+    
     return(theAttributes);
+}
+
+-(void)setPinchedCellScale:(CGFloat)scale
+{
+    _pinchedCellScale = scale;
+    [self invalidateLayout];
+}
+
+- (void)setPinchedCellCenter:(CGPoint)origin {
+    _pinchedCellCenter = origin;
+    [self invalidateLayout];
+}
+
+-(void)applyPinchToLayoutAttributes:(UICollectionViewLayoutAttributes*)layoutAttributes
+{
+    if ([layoutAttributes.indexPath isEqual:self.pinchedCellPath])
+    {
+        layoutAttributes.transform3D = CATransform3DMakeScale(self.pinchedCellScale, self.pinchedCellScale, 1.0);
+        layoutAttributes.center = self.pinchedCellCenter;
+        layoutAttributes.zIndex = 1;
+    }
 }
 
 

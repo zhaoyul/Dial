@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "AWCollectionViewDialLayout.h"
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -30,6 +30,7 @@ static NSString *cellId2 = @"cellId2";
     UISlider *xOffsetSlider;
     UISegmentedControl *exampleSwitch;
     AWCollectionViewDialLayout *dialLayout;
+    UIPanGestureRecognizer *pan;
     
     int type;
 }
@@ -43,6 +44,14 @@ static NSString *cellId2 = @"cellId2";
     
     [collectionView registerNib:[UINib nibWithNibName:@"dialCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:cellId];
     [collectionView registerNib:[UINib nibWithNibName:@"dialCell2" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:cellId2];
+    
+    
+    UIPanGestureRecognizer* pinchRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    pan = pinchRecognizer;
+    [self.collectionView addGestureRecognizer:pinchRecognizer];
+
+//    self.collectionView.panGestureRecognizer.delegate = self;
+    pan.delegate = self;
     
     
     NSError *error;
@@ -60,8 +69,8 @@ static NSString *cellId2 = @"cellId2";
     CGFloat radius = radiusSlider.value * 1000;
     CGFloat angularSpacing = angularSpacingSlider.value * 90;
     CGFloat xOffset = xOffsetSlider.value * 320;
-    CGFloat cell_width = 240;
-    CGFloat cell_height = 100;
+    CGFloat cell_width = 70;
+    CGFloat cell_height = 70;
     [radiusLabel setText:[NSString stringWithFormat:@"Radius: %i", (int)radius]];
     [angularSpacingLabel setText:[NSString stringWithFormat:@"Angular spacing: %i", (int)angularSpacing]];
     [xOffsetLabel setText:[NSString stringWithFormat:@"X offset: %i", (int)xOffset]];
@@ -246,7 +255,7 @@ static NSString *cellId2 = @"cellId2";
 #pragma mark - UICollectionViewDelegate methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(240, 100);
+    return CGSizeMake(100, 100);
 }
 
 
@@ -285,5 +294,51 @@ static NSString *cellId2 = @"cellId2";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)handlePinchGesture:(UIPanGestureRecognizer *)sender
+{
+    AWCollectionViewDialLayout* pinchLayout = (AWCollectionViewDialLayout*)self.collectionView.collectionViewLayout;
+    
+    if (sender.state == UIGestureRecognizerStateBegan)
+    {
+        CGPoint initialPinchPoint = [sender locationInView:self.collectionView];
+        NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+        pinchLayout.pinchedCellPath = pinchedCellPath;
+        
+    }
+    
+    else if (sender.state == UIGestureRecognizerStateChanged)
+    {
+//        pinchLayout.pinchedCellScale = sender.scale;
+        pinchLayout.pinchedCellCenter = [sender locationInView:self.collectionView];
+    }
+    
+    else
+    {
+        [self.collectionView performBatchUpdates:^{
+            pinchLayout.pinchedCellPath = nil;
+            pinchLayout.pinchedCellScale = 1.0;
+        } completion:nil];
+    }
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    if (gestureRecognizer == self.collectionView.panGestureRecognizer &&
+        otherGestureRecognizer == pan) {
+        return YES;
+    }
+    return NO;
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    CGPoint initialPinchPoint = [touch locationInView:self.collectionView];
+    NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+
+    if (pinchedCellPath) {
+        return YES;
+    }
+    return NO;
+}
+
 
 @end
