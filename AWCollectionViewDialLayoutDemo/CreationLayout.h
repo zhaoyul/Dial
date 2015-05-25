@@ -1,9 +1,9 @@
 //
-//  CreationLayout.h
+//  CreationLayoutDemo
 //  
 //
 //  Created by Kevin Li on 2015.05.20.
-//  Copyright (c) 2013 Antoine Wette. All rights reserved.
+//  Copyright (c) 2014 Kevin Li. All rights reserved.
 //
 //  
 //  
