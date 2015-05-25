@@ -119,9 +119,9 @@ static NSString *cellId2 = @"cellId2";
         [dialLayout setCellSize:CGSizeMake(100, 100)];
         [dialLayout setWheelType:WHEELALIGNMENTLEFT];
         
-        radius = 300;
-        angularSpacing = 18;
-        xOffset = 70;
+        radius = 70;
+        angularSpacing = 40;
+        xOffset = 232;
     }else if(type == 1){
         [dialLayout setCellSize:CGSizeMake(260, 50)];
         [dialLayout setWheelType:WHEELALIGNMENTCENTER];

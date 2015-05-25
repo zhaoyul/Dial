@@ -131,19 +131,18 @@
     CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     theAttributes.alpha = scaleFactor;
     
-    /*
-    if( fabs(self.AngularSpacing* newIndex) > 90 ){
-        theAttributes.hidden = YES;
-    }else{
-        theAttributes.hidden = NO;
-    }
-     */
     
     theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
     theAttributes.zIndex = indexPath.item;
     
     
     [self applyPinchToLayoutAttributes:theAttributes];
+    
+    if( self.AngularSpacing* newIndex > 260 || self.AngularSpacing * newIndex < -30){
+        theAttributes.center = CGPointMake(400, -100);
+    }else{
+        theAttributes.hidden = NO;
+    }
     
     return(theAttributes);
 }
