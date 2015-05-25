@@ -116,12 +116,12 @@ static NSString *cellId2 = @"cellId2";
     CGFloat radius = 0 ,angularSpacing  = 0, xOffset = 0;
     
     if(type == 0){
-        [dialLayout setCellSize:CGSizeMake(100, 100)];
+        [dialLayout setCellSize:CGSizeMake(60, 60)];
         [dialLayout setWheelType:WHEELALIGNMENTLEFT];
         
-        radius = 70;
-        angularSpacing = 40;
-        xOffset = 232;
+        radius = 98;
+        angularSpacing = 48;
+        xOffset = 258;
     }else if(type == 1){
         [dialLayout setCellSize:CGSizeMake(260, 50)];
         [dialLayout setWheelType:WHEELALIGNMENTCENTER];
@@ -257,7 +257,7 @@ static NSString *cellId2 = @"cellId2";
 #pragma mark - UICollectionViewDelegate methods
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(100, 100);
+    return CGSizeMake(60, 60);
 }
 
 

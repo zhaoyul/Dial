@@ -62,23 +62,7 @@
 {
     NSMutableArray *theLayoutAttributes = [[NSMutableArray alloc] init];
     
-    float minY = CGRectGetMinY(rect);
-    float maxY = CGRectGetMaxY(rect);
-    
-    int firstIndex = floorf(minY / self.itemHeight);
-    int lastIndex = floorf(maxY / self.itemHeight);
-    int activeIndex = (int)(firstIndex + lastIndex)/2;
-    
-    int maxVisibleOnScreen = 180 / self.AngularSpacing + 2;
-    
-    int firstItem = fmax(0, activeIndex - (int)(maxVisibleOnScreen/2) );
-    int lastItem = fmin( self.cellCount-1 , activeIndex + (int)(maxVisibleOnScreen/2) );
-
-    //float firstItem = fmax(0 , floorf(minY / self.itemHeight) - (90/self.AngularSpacing) );
-    //float lastItem = fmin( self.cellCount-1 , floorf(maxY / self.itemHeight) );
-
-//    for( int i = firstItem; i <= lastItem; i++ ){
-    for( int i = 0; i <= self.cellCount-1; i++ ){
+       for( int i = 0; i <= self.cellCount-1; i++ ){
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [theLayoutAttributes addObject:theAttributes];
@@ -139,7 +123,7 @@
     [self applyPinchToLayoutAttributes:theAttributes];
     
     if( self.AngularSpacing* newIndex > 260 || self.AngularSpacing * newIndex < -30){
-        theAttributes.center = CGPointMake(400, -100);
+        theAttributes.center = CGPointMake(400, -200);
     }else{
         theAttributes.hidden = NO;
     }
