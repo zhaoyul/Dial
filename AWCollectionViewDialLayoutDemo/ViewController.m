@@ -311,7 +311,7 @@ static NSString *cellId2 = @"cellId2";
     
     else if (sender.state == UIGestureRecognizerStateChanged)
     {
-//        pinchLayout.pinchedCellScale = sender.scale;
+        pinchLayout.pinchedCellScale = 2.0;
         pinchLayout.pinchedCellCenter = [sender locationInView:self.collectionView];
     }
     
