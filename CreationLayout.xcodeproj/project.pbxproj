@@ -17,46 +17,30 @@
 		71D04A1E18D3068F0077B38B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A1C18D3068F0077B38B /* Main_iPad.storyboard */; };
 		71D04A2118D3068F0077B38B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A2018D3068F0077B38B /* ViewController.m */; };
 		71D04A2318D3068F0077B38B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A2218D3068F0077B38B /* Images.xcassets */; };
-		71D04A2A18D3068F0077B38B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A2918D3068F0077B38B /* XCTest.framework */; };
-		71D04A2B18D3068F0077B38B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0718D3068F0077B38B /* Foundation.framework */; };
-		71D04A2C18D3068F0077B38B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D04A0B18D3068F0077B38B /* UIKit.framework */; };
-		71D04A3418D3068F0077B38B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A3218D3068F0077B38B /* InfoPlist.strings */; };
-		71D04A3618D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A3518D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m */; };
 		71D04A4218D306A30077B38B /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */; };
 		71D04A4418D309C40077B38B /* dialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4318D309C40077B38B /* dialCell.xib */; };
-		71D04A4618D311190077B38B /* players.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* players.json */; };
-		71D04A4D18D3114C0077B38B /* carmelo_anthony.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4818D3114C0077B38B /* carmelo_anthony.png */; };
-		71D04A4E18D3114C0077B38B /* dwayne_wade.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4918D3114C0077B38B /* dwayne_wade.png */; };
-		71D04A4F18D3114C0077B38B /* kyrie_irving.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4A18D3114C0077B38B /* kyrie_irving.png */; };
-		71D04A5018D3114C0077B38B /* lebron_james.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4B18D3114C0077B38B /* lebron_james.png */; };
-		71D04A5118D3114C0077B38B /* paul_george.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4C18D3114C0077B38B /* paul_george.png */; };
-		71D04A5318D315980077B38B /* james_harden.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A5218D315980077B38B /* james_harden.png */; };
-		71DD0C6218D31DD900152D0C /* kevin_durant.png in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6118D31DD900152D0C /* kevin_durant.png */; };
+		71D04A4618D311190077B38B /* materials.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* materials.json */; };
 		71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6318D3540400152D0C /* iphone_settings_view.xib */; };
 		71DD223918D879A1005450FA /* dialCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223818D879A1005450FA /* dialCell2.xib */; };
-		71DD223C18D885F3005450FA /* awcollectionviewdiallayout_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */; };
-		71DD223D18D885F3005450FA /* awcollectionviewdiallayout_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */; };
+		D5D198C31B12E2D600092801 /* small-0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198BB1B12E2D600092801 /* small-0.jpeg */; };
+		D5D198C41B12E2D600092801 /* small-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198BC1B12E2D600092801 /* small-1.jpeg */; };
+		D5D198C51B12E2D600092801 /* small-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198BD1B12E2D600092801 /* small-2.jpeg */; };
+		D5D198C61B12E2D600092801 /* small-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198BE1B12E2D600092801 /* small-3.jpeg */; };
+		D5D198C71B12E2D600092801 /* small-4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198BF1B12E2D600092801 /* small-4.jpeg */; };
+		D5D198C81B12E2D600092801 /* small-5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198C01B12E2D600092801 /* small-5.jpeg */; };
+		D5D198C91B12E2D600092801 /* small-6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198C11B12E2D600092801 /* small-6.jpeg */; };
+		D5D198CA1B12E2D600092801 /* small-7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D5D198C21B12E2D600092801 /* small-7.jpeg */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		71D04A2D18D3068F0077B38B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 71D049FC18D3068F0077B38B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 71D04A0318D3068F0077B38B;
-			remoteInfo = AWCollectionViewDialLayoutDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		71D04A0418D3068F0077B38B /* AWCollectionViewDialLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWCollectionViewDialLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D04A0418D3068F0077B38B /* CreationLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreationLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D04A0718D3068F0077B38B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71D04A0918D3068F0077B38B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		71D04A0B18D3068F0077B38B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		71D04A0F18D3068F0077B38B /* AWCollectionViewDialLayoutDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AWCollectionViewDialLayoutDemo-Info.plist"; sourceTree = "<group>"; };
+		71D04A0F18D3068F0077B38B /* CreationLayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CreationLayout-Info.plist"; sourceTree = "<group>"; };
 		71D04A1118D3068F0077B38B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71D04A1318D3068F0077B38B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		71D04A1518D3068F0077B38B /* AWCollectionViewDialLayoutDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AWCollectionViewDialLayoutDemo-Prefix.pch"; sourceTree = "<group>"; };
+		71D04A1518D3068F0077B38B /* CreationLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CreationLayout-Prefix.pch"; sourceTree = "<group>"; };
 		71D04A1618D3068F0077B38B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71D04A1718D3068F0077B38B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		71D04A1A18D3068F0077B38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -64,26 +48,24 @@
 		71D04A1F18D3068F0077B38B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		71D04A2018D3068F0077B38B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71D04A2218D3068F0077B38B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		71D04A2818D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWCollectionViewDialLayoutDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D04A2918D3068F0077B38B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		71D04A3118D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AWCollectionViewDialLayoutDemoTests-Info.plist"; sourceTree = "<group>"; };
+		71D04A3118D3068F0077B38B /* CreationLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CreationLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		71D04A3318D3068F0077B38B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71D04A3518D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayoutDemoTests.m; sourceTree = "<group>"; };
 		71D04A4018D306A30077B38B /* AWCollectionViewDialLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewDialLayout.h; sourceTree = "<group>"; };
 		71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
 		71D04A4318D309C40077B38B /* dialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell.xib; sourceTree = "<group>"; };
-		71D04A4518D311190077B38B /* players.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = players.json; sourceTree = "<group>"; };
-		71D04A4818D3114C0077B38B /* carmelo_anthony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carmelo_anthony.png; sourceTree = "<group>"; };
-		71D04A4918D3114C0077B38B /* dwayne_wade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dwayne_wade.png; sourceTree = "<group>"; };
-		71D04A4A18D3114C0077B38B /* kyrie_irving.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyrie_irving.png; sourceTree = "<group>"; };
-		71D04A4B18D3114C0077B38B /* lebron_james.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lebron_james.png; sourceTree = "<group>"; };
-		71D04A4C18D3114C0077B38B /* paul_george.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paul_george.png; sourceTree = "<group>"; };
-		71D04A5218D315980077B38B /* james_harden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = james_harden.png; sourceTree = "<group>"; };
-		71DD0C6118D31DD900152D0C /* kevin_durant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kevin_durant.png; sourceTree = "<group>"; };
+		71D04A4518D311190077B38B /* materials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = materials.json; sourceTree = "<group>"; };
 		71DD0C6318D3540400152D0C /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
 		71DD223818D879A1005450FA /* dialCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell2.xib; sourceTree = "<group>"; };
-		71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awcollectionviewdiallayout_1.jpg; sourceTree = "<group>"; };
-		71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awcollectionviewdiallayout_2.jpg; sourceTree = "<group>"; };
+		D5D198BB1B12E2D600092801 /* small-0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-0.jpeg"; sourceTree = "<group>"; };
+		D5D198BC1B12E2D600092801 /* small-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-1.jpeg"; sourceTree = "<group>"; };
+		D5D198BD1B12E2D600092801 /* small-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-2.jpeg"; sourceTree = "<group>"; };
+		D5D198BE1B12E2D600092801 /* small-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-3.jpeg"; sourceTree = "<group>"; };
+		D5D198BF1B12E2D600092801 /* small-4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-4.jpeg"; sourceTree = "<group>"; };
+		D5D198C01B12E2D600092801 /* small-5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-5.jpeg"; sourceTree = "<group>"; };
+		D5D198C11B12E2D600092801 /* small-6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-6.jpeg"; sourceTree = "<group>"; };
+		D5D198C21B12E2D600092801 /* small-7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "small-7.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,16 +76,6 @@
 				71D04A0A18D3068F0077B38B /* CoreGraphics.framework in Frameworks */,
 				71D04A0C18D3068F0077B38B /* UIKit.framework in Frameworks */,
 				71D04A0818D3068F0077B38B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71D04A2518D3068F0077B38B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71D04A2A18D3068F0077B38B /* XCTest.framework in Frameworks */,
-				71D04A2C18D3068F0077B38B /* UIKit.framework in Frameworks */,
-				71D04A2B18D3068F0077B38B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +95,7 @@
 		71D04A0518D3068F0077B38B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71D04A0418D3068F0077B38B /* AWCollectionViewDialLayoutDemo.app */,
-				71D04A2818D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.xctest */,
+				71D04A0418D3068F0077B38B /* CreationLayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,7 +124,7 @@
 				71D04A2018D3068F0077B38B /* ViewController.m */,
 				71D04A4318D309C40077B38B /* dialCell.xib */,
 				71DD223818D879A1005450FA /* dialCell2.xib */,
-				71D04A4518D311190077B38B /* players.json */,
+				71D04A4518D311190077B38B /* materials.json */,
 				71D04A2218D3068F0077B38B /* Images.xcassets */,
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
 				71DD0C6318D3540400152D0C /* iphone_settings_view.xib */,
@@ -164,10 +135,10 @@
 		71D04A0E18D3068F0077B38B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				71D04A0F18D3068F0077B38B /* AWCollectionViewDialLayoutDemo-Info.plist */,
+				71D04A0F18D3068F0077B38B /* CreationLayout-Info.plist */,
 				71D04A1018D3068F0077B38B /* InfoPlist.strings */,
 				71D04A1318D3068F0077B38B /* main.m */,
-				71D04A1518D3068F0077B38B /* AWCollectionViewDialLayoutDemo-Prefix.pch */,
+				71D04A1518D3068F0077B38B /* CreationLayout-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,7 +155,7 @@
 		71D04A3018D3068F0077B38B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				71D04A3118D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests-Info.plist */,
+				71D04A3118D3068F0077B38B /* CreationLayoutTests-Info.plist */,
 				71D04A3218D3068F0077B38B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -202,15 +173,14 @@
 		71D04A4718D311340077B38B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				71DD223A18D885F3005450FA /* awcollectionviewdiallayout_1.jpg */,
-				71DD223B18D885F3005450FA /* awcollectionviewdiallayout_2.jpg */,
-				71D04A4818D3114C0077B38B /* carmelo_anthony.png */,
-				71D04A4918D3114C0077B38B /* dwayne_wade.png */,
-				71D04A5218D315980077B38B /* james_harden.png */,
-				71DD0C6118D31DD900152D0C /* kevin_durant.png */,
-				71D04A4A18D3114C0077B38B /* kyrie_irving.png */,
-				71D04A4B18D3114C0077B38B /* lebron_james.png */,
-				71D04A4C18D3114C0077B38B /* paul_george.png */,
+				D5D198BB1B12E2D600092801 /* small-0.jpeg */,
+				D5D198BC1B12E2D600092801 /* small-1.jpeg */,
+				D5D198BD1B12E2D600092801 /* small-2.jpeg */,
+				D5D198BE1B12E2D600092801 /* small-3.jpeg */,
+				D5D198BF1B12E2D600092801 /* small-4.jpeg */,
+				D5D198C01B12E2D600092801 /* small-5.jpeg */,
+				D5D198C11B12E2D600092801 /* small-6.jpeg */,
+				D5D198C21B12E2D600092801 /* small-7.jpeg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -218,9 +188,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71D04A0318D3068F0077B38B /* AWCollectionViewDialLayoutDemo */ = {
+		71D04A0318D3068F0077B38B /* CreationLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71D04A3918D3068F0077B38B /* Build configuration list for PBXNativeTarget "AWCollectionViewDialLayoutDemo" */;
+			buildConfigurationList = 71D04A3918D3068F0077B38B /* Build configuration list for PBXNativeTarget "CreationLayout" */;
 			buildPhases = (
 				71D04A0018D3068F0077B38B /* Sources */,
 				71D04A0118D3068F0077B38B /* Frameworks */,
@@ -230,28 +200,10 @@
 			);
 			dependencies = (
 			);
-			name = AWCollectionViewDialLayoutDemo;
+			name = CreationLayout;
 			productName = AWCollectionViewDialLayoutDemo;
-			productReference = 71D04A0418D3068F0077B38B /* AWCollectionViewDialLayoutDemo.app */;
+			productReference = 71D04A0418D3068F0077B38B /* CreationLayout.app */;
 			productType = "com.apple.product-type.application";
-		};
-		71D04A2718D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 71D04A3C18D3068F0077B38B /* Build configuration list for PBXNativeTarget "AWCollectionViewDialLayoutDemoTests" */;
-			buildPhases = (
-				71D04A2418D3068F0077B38B /* Sources */,
-				71D04A2518D3068F0077B38B /* Frameworks */,
-				71D04A2618D3068F0077B38B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				71D04A2E18D3068F0077B38B /* PBXTargetDependency */,
-			);
-			name = AWCollectionViewDialLayoutDemoTests;
-			productName = AWCollectionViewDialLayoutDemoTests;
-			productReference = 71D04A2818D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -263,14 +215,11 @@
 				ORGANIZATIONNAME = "Antoine Wette";
 				TargetAttributes = {
 					71D04A0318D3068F0077B38B = {
-						DevelopmentTeam = BL74ELR79A;
-					};
-					71D04A2718D3068F0077B38B = {
-						TestTargetID = 71D04A0318D3068F0077B38B;
+						DevelopmentTeam = V2GFP456SM;
 					};
 				};
 			};
-			buildConfigurationList = 71D049FF18D3068F0077B38B /* Build configuration list for PBXProject "AWCollectionViewDialLayoutDemo" */;
+			buildConfigurationList = 71D049FF18D3068F0077B38B /* Build configuration list for PBXProject "CreationLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -283,8 +232,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71D04A0318D3068F0077B38B /* AWCollectionViewDialLayoutDemo */,
-				71D04A2718D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests */,
+				71D04A0318D3068F0077B38B /* CreationLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -294,31 +242,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DD0C6218D31DD900152D0C /* kevin_durant.png in Resources */,
-				71D04A5118D3114C0077B38B /* paul_george.png in Resources */,
-				71DD223D18D885F3005450FA /* awcollectionviewdiallayout_2.jpg in Resources */,
+				D5D198C91B12E2D600092801 /* small-6.jpeg in Resources */,
+				D5D198C51B12E2D600092801 /* small-2.jpeg in Resources */,
+				D5D198C41B12E2D600092801 /* small-1.jpeg in Resources */,
+				D5D198C61B12E2D600092801 /* small-3.jpeg in Resources */,
 				71D04A1E18D3068F0077B38B /* Main_iPad.storyboard in Resources */,
-				71D04A4F18D3114C0077B38B /* kyrie_irving.png in Resources */,
+				D5D198CA1B12E2D600092801 /* small-7.jpeg in Resources */,
+				D5D198C31B12E2D600092801 /* small-0.jpeg in Resources */,
 				71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */,
-				71D04A5018D3114C0077B38B /* lebron_james.png in Resources */,
-				71D04A5318D315980077B38B /* james_harden.png in Resources */,
+				D5D198C81B12E2D600092801 /* small-5.jpeg in Resources */,
+				D5D198C71B12E2D600092801 /* small-4.jpeg in Resources */,
 				71D04A4418D309C40077B38B /* dialCell.xib in Resources */,
-				71D04A4E18D3114C0077B38B /* dwayne_wade.png in Resources */,
-				71D04A4618D311190077B38B /* players.json in Resources */,
+				71D04A4618D311190077B38B /* materials.json in Resources */,
 				71D04A2318D3068F0077B38B /* Images.xcassets in Resources */,
 				71DD223918D879A1005450FA /* dialCell2.xib in Resources */,
-				71DD223C18D885F3005450FA /* awcollectionviewdiallayout_1.jpg in Resources */,
 				71D04A1B18D3068F0077B38B /* Main_iPhone.storyboard in Resources */,
-				71D04A4D18D3114C0077B38B /* carmelo_anthony.png in Resources */,
 				71D04A1218D3068F0077B38B /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		71D04A2618D3068F0077B38B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71D04A3418D3068F0077B38B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,23 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71D04A2418D3068F0077B38B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71D04A3618D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		71D04A2E18D3068F0077B38B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 71D04A0318D3068F0077B38B /* AWCollectionViewDialLayoutDemo */;
-			targetProxy = 71D04A2D18D3068F0077B38B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		71D04A1018D3068F0077B38B /* InfoPlist.strings */ = {
@@ -470,10 +393,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Info.plist";
+				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/CreationLayout-Prefix.pch";
+				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/CreationLayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CreationLayout;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -488,60 +411,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Info.plist";
+				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/CreationLayout-Prefix.pch";
+				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/CreationLayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CreationLayout;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		71D04A3D18D3068F0077B38B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AWCollectionViewDialLayoutDemo.app/AWCollectionViewDialLayoutDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemoTests/AWCollectionViewDialLayoutDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		71D04A3E18D3068F0077B38B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AWCollectionViewDialLayoutDemo.app/AWCollectionViewDialLayoutDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/AWCollectionViewDialLayoutDemo-Prefix.pch";
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemoTests/AWCollectionViewDialLayoutDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71D049FF18D3068F0077B38B /* Build configuration list for PBXProject "AWCollectionViewDialLayoutDemo" */ = {
+		71D049FF18D3068F0077B38B /* Build configuration list for PBXProject "CreationLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D04A3718D3068F0077B38B /* Debug */,
@@ -550,20 +433,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71D04A3918D3068F0077B38B /* Build configuration list for PBXNativeTarget "AWCollectionViewDialLayoutDemo" */ = {
+		71D04A3918D3068F0077B38B /* Build configuration list for PBXNativeTarget "CreationLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D04A3A18D3068F0077B38B /* Debug */,
 				71D04A3B18D3068F0077B38B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		71D04A3C18D3068F0077B38B /* Build configuration list for PBXNativeTarget "AWCollectionViewDialLayoutDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				71D04A3D18D3068F0077B38B /* Debug */,
-				71D04A3E18D3068F0077B38B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

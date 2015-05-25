@@ -55,7 +55,7 @@ static NSString *cellId2 = @"cellId2";
     
     
     NSError *error;
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"players" ofType:@"json"];
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"materials" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:NULL];
     NSLog(@"jsonString:%@",jsonString);
     items = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
@@ -223,6 +223,8 @@ static NSString *cellId2 = @"cellId2";
         
         NSString *imgURL = [item valueForKey:@"picture"];
         UIImageView *imgView = (UIImageView*)[cell viewWithTag:100];
+        UILabel *label = (UILabel*)[cell viewWithTag:555];
+        label.text = @(indexPath.item).stringValue;
         [imgView setImage:nil];
         __block UIImage *imageProduct = [thumbnailCache objectForKey:imgURL];
         if(imageProduct){
