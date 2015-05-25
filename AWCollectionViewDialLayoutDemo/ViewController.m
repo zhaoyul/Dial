@@ -342,5 +342,7 @@ static NSString *cellId2 = @"cellId2";
     return NO;
 }
 
+-collection
+
 
 @end
