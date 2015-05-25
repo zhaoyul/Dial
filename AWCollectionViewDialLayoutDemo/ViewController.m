@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  AWCollectionViewDialLayoutDemo
+//  CreationLayoutDemo
 //
-//  Created by Antoine Wette on 14.03.14.
-//  Copyright (c) 2014 Antoine Wette. All rights reserved.
+//  Created by Kevin Li on 2015.05.20
+//  Copyright (c) 2015 Kevin Li. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "AWCollectionViewDialLayout.h"
+#import "CreationLayout.h"
 
 @interface ViewController () <UIGestureRecognizerDelegate>
 
@@ -29,7 +29,7 @@ static NSString *cellId2 = @"cellId2";
     UILabel *xOffsetLabel;
     UISlider *xOffsetSlider;
     UISegmentedControl *exampleSwitch;
-    AWCollectionViewDialLayout *dialLayout;
+    CreationLayout *dialLayout;
     UIPanGestureRecognizer *pan;
     
     int type;
@@ -77,7 +77,7 @@ static NSString *cellId2 = @"cellId2";
     
     
     
-    dialLayout = [[AWCollectionViewDialLayout alloc] initWithRadius:radius andAngularSpacing:angularSpacing andCellSize:CGSizeMake(cell_width, cell_height) andAlignment:WHEELALIGNMENTCENTER andItemHeight:cell_height andXOffset:xOffset];
+    dialLayout = [[CreationLayout alloc] initWithRadius:radius andAngularSpacing:angularSpacing andCellSize:CGSizeMake(cell_width, cell_height) andAlignment:WHEELALIGNMENTCENTER andItemHeight:cell_height andXOffset:xOffset];
     [collectionView setCollectionViewLayout:dialLayout];
 
     [editBtn setTarget:self];
@@ -299,7 +299,7 @@ static NSString *cellId2 = @"cellId2";
 
 - (void)handlePinchGesture:(UIPanGestureRecognizer *)sender
 {
-    AWCollectionViewDialLayout* pinchLayout = (AWCollectionViewDialLayout*)self.collectionView.collectionViewLayout;
+    CreationLayout* pinchLayout = (CreationLayout*)self.collectionView.collectionViewLayout;
     
     if (sender.state == UIGestureRecognizerStateBegan)
     {

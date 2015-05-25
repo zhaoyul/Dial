@@ -17,7 +17,7 @@
 		71D04A1E18D3068F0077B38B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A1C18D3068F0077B38B /* Main_iPad.storyboard */; };
 		71D04A2118D3068F0077B38B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A2018D3068F0077B38B /* ViewController.m */; };
 		71D04A2318D3068F0077B38B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A2218D3068F0077B38B /* Images.xcassets */; };
-		71D04A4218D306A30077B38B /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */; };
+		71D04A4218D306A30077B38B /* CreationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A4118D306A30077B38B /* CreationLayout.m */; };
 		71D04A4418D309C40077B38B /* dialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4318D309C40077B38B /* dialCell.xib */; };
 		71D04A4618D311190077B38B /* materials.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* materials.json */; };
 		71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6318D3540400152D0C /* iphone_settings_view.xib */; };
@@ -49,11 +49,8 @@
 		71D04A2018D3068F0077B38B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71D04A2218D3068F0077B38B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71D04A2918D3068F0077B38B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		71D04A3118D3068F0077B38B /* CreationLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CreationLayoutTests-Info.plist"; sourceTree = "<group>"; };
-		71D04A3318D3068F0077B38B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		71D04A3518D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayoutDemoTests.m; sourceTree = "<group>"; };
-		71D04A4018D306A30077B38B /* AWCollectionViewDialLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewDialLayout.h; sourceTree = "<group>"; };
-		71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
+		71D04A4018D306A30077B38B /* CreationLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationLayout.h; sourceTree = "<group>"; };
+		71D04A4118D306A30077B38B /* CreationLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationLayout.m; sourceTree = "<group>"; };
 		71D04A4318D309C40077B38B /* dialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell.xib; sourceTree = "<group>"; };
 		71D04A4518D311190077B38B /* materials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = materials.json; sourceTree = "<group>"; };
 		71DD0C6318D3540400152D0C /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
@@ -85,8 +82,7 @@
 		71D049FB18D3068F0077B38B = {
 			isa = PBXGroup;
 			children = (
-				71D04A0D18D3068F0077B38B /* AWCollectionViewDialLayoutDemo */,
-				71D04A2F18D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests */,
+				71D04A0D18D3068F0077B38B /* CreationLayoutDemo */,
 				71D04A0618D3068F0077B38B /* Frameworks */,
 				71D04A0518D3068F0077B38B /* Products */,
 			);
@@ -111,7 +107,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		71D04A0D18D3068F0077B38B /* AWCollectionViewDialLayoutDemo */ = {
+		71D04A0D18D3068F0077B38B /* CreationLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
 				71D04A4718D311340077B38B /* Assets */,
@@ -129,6 +125,7 @@
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
 				71DD0C6318D3540400152D0C /* iphone_settings_view.xib */,
 			);
+			name = CreationLayoutDemo;
 			path = AWCollectionViewDialLayoutDemo;
 			sourceTree = "<group>";
 		};
@@ -143,29 +140,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		71D04A2F18D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				71D04A3518D3068F0077B38B /* AWCollectionViewDialLayoutDemoTests.m */,
-				71D04A3018D3068F0077B38B /* Supporting Files */,
-			);
-			path = AWCollectionViewDialLayoutDemoTests;
-			sourceTree = "<group>";
-		};
-		71D04A3018D3068F0077B38B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				71D04A3118D3068F0077B38B /* CreationLayoutTests-Info.plist */,
-				71D04A3218D3068F0077B38B /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		71D04A3F18D306930077B38B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				71D04A4018D306A30077B38B /* AWCollectionViewDialLayout.h */,
-				71D04A4118D306A30077B38B /* AWCollectionViewDialLayout.m */,
+				71D04A4018D306A30077B38B /* CreationLayout.h */,
+				71D04A4118D306A30077B38B /* CreationLayout.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -271,7 +250,7 @@
 				71D04A2118D3068F0077B38B /* ViewController.m in Sources */,
 				71D04A1818D3068F0077B38B /* AppDelegate.m in Sources */,
 				71D04A1418D3068F0077B38B /* main.m in Sources */,
-				71D04A4218D306A30077B38B /* AWCollectionViewDialLayout.m in Sources */,
+				71D04A4218D306A30077B38B /* CreationLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +279,6 @@
 				71D04A1D18D3068F0077B38B /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		71D04A3218D3068F0077B38B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71D04A3318D3068F0077B38B /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

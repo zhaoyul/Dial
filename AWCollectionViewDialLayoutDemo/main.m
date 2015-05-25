@@ -2,8 +2,8 @@
 //  main.m
 //  AWCollectionViewDialLayoutDemo
 //
-//  Created by Antoine Wette on 14.03.14.
-//  Copyright (c) 2014 Antoine Wette. All rights reserved.
+//  Created by Kevin Li on 2015.05.20
+//  Copyright (c) 2015 Kevin Li. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

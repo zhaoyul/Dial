@@ -1,17 +1,17 @@
 //
-//  AWCollectionViewDialLayout.h
+//  CreationLayout.h
 //  
 //
-//  Created by Antoine Wette on 30.10.13.
+//  Created by Kevin Li on 2015.05.20.
 //  Copyright (c) 2013 Antoine Wette. All rights reserved.
 //
-//  info@antoinewette.com
-//  www.antoinewette.com
+//  
+//  
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AWCollectionViewDialLayout : UICollectionViewLayout
+@interface CreationLayout : UICollectionViewLayout
 
 typedef enum WheelAlignmentType : NSInteger WheelAlignmentType;
 enum WheelAlignmentType : NSInteger {
