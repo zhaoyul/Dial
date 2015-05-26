@@ -21,6 +21,7 @@
 		71D04A4618D311190077B38B /* materials.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* materials.json */; };
 		71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6318D3540400152D0C /* iphone_settings_view.xib */; };
 		71DD223918D879A1005450FA /* dialCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223818D879A1005450FA /* dialCell2.xib */; };
+		D58880C71B1476FE002835B6 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = D58880C61B1476FE002835B6 /* 5.png */; };
 		D59AD1901B141E7C009C4609 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D59AD18E1B141E7C009C4609 /* 3.png */; };
 		D59AD1911B141E7C009C4609 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = D59AD18F1B141E7C009C4609 /* 4.png */; };
 		D5C1C95C1B143AAB009F7E3E /* Cloths.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C1C95B1B143AAB009F7E3E /* Cloths.xib */; };
@@ -56,6 +57,7 @@
 		71D04A4518D311190077B38B /* materials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = materials.json; sourceTree = "<group>"; };
 		71DD0C6318D3540400152D0C /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
 		71DD223818D879A1005450FA /* dialCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell2.xib; sourceTree = "<group>"; };
+		D58880C61B1476FE002835B6 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		D59AD18E1B141E7C009C4609 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		D59AD18F1B141E7C009C4609 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		D5C1C95B1B143AAB009F7E3E /* Cloths.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cloths.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D5D198C21B12E2D600092801 /* small-7.jpeg */,
 				D59AD18E1B141E7C009C4609 /* 3.png */,
 				D59AD18F1B141E7C009C4609 /* 4.png */,
+				D58880C61B1476FE002835B6 /* 5.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				D5D198C91B12E2D600092801 /* small-6.jpeg in Resources */,
 				D5D198C51B12E2D600092801 /* small-2.jpeg in Resources */,
+				D58880C71B1476FE002835B6 /* 5.png in Resources */,
 				D5D198C41B12E2D600092801 /* small-1.jpeg in Resources */,
 				D5D198C61B12E2D600092801 /* small-3.jpeg in Resources */,
 				D59AD1911B141E7C009C4609 /* 4.png in Resources */,

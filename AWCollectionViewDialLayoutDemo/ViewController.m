@@ -35,6 +35,10 @@ static NSString *cellIdCloths = @"clothCell";
     UIPanGestureRecognizer *pan;
     
     int type;
+    
+    UICollectionViewCell * imageCell;
+    CAShapeLayer *circleShapeLayer;
+    CGRect dragRect;
 }
 
 @synthesize collectionView, items, editBtn;
@@ -271,6 +275,7 @@ static NSString *cellIdCloths = @"clothCell";
         UIImageView *clothImageView = (UIImageView*)[cell viewWithTag:11111];
         clothImageView.image = [UIImage imageNamed:@"3.png"];
         cell.userInteractionEnabled = NO;
+        imageCell = cell;
         
     } else if (indexPath.section == 1){
         cell = [self getCircleCellWithIndex:indexPath cv:cv];
@@ -325,18 +330,44 @@ static NSString *cellIdCloths = @"clothCell";
 {
     CreationLayout* pinchLayout = (CreationLayout*)self.collectionView.collectionViewLayout;
     
+    dragRect = CGRectMake(self.view.frame.size.width/2 - 50, self.view.frame.size.height/2 - 50, 100, 100);
+
+    
     if (sender.state == UIGestureRecognizerStateBegan)
     {
         CGPoint initialPinchPoint = [sender locationInView:self.collectionView];
         NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+        
+       
+        
         pinchLayout.pinchedCellPath = pinchedCellPath;
+        
+        circleShapeLayer = [CAShapeLayer layer];
+        [self.view.layer addSublayer:circleShapeLayer];
+        circleShapeLayer.fillColor = [UIColor colorWithWhite:1.0 alpha:0.3].CGColor;
+        circleShapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:dragRect].CGPath;
+        
         
     }
     
     else if (sender.state == UIGestureRecognizerStateChanged)
     {
-        pinchLayout.pinchedCellScale = 2.0;
+        pinchLayout.pinchedCellScale = 1.3;
         pinchLayout.pinchedCellCenter = [sender locationInView:self.collectionView];
+        
+        CGPoint testPinchPoint = [sender locationInView:self.view];
+
+        
+        if (CGRectContainsPoint(dragRect,testPinchPoint)) {
+            
+            circleShapeLayer.fillColor = [UIColor colorWithWhite:1.0 alpha:0.6].CGColor;
+            circleShapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:dragRect].CGPath;
+        } else {
+            circleShapeLayer.fillColor = [UIColor colorWithWhite:1.0 alpha:0.3].CGColor;
+            circleShapeLayer.path = [UIBezierPath bezierPathWithOvalInRect:dragRect].CGPath;
+        }
+        
+
     }
     
     else
@@ -344,7 +375,25 @@ static NSString *cellIdCloths = @"clothCell";
         [self.collectionView performBatchUpdates:^{
             pinchLayout.pinchedCellPath = nil;
             pinchLayout.pinchedCellScale = 1.0;
-        } completion:nil];
+            
+            [circleShapeLayer removeFromSuperlayer];
+
+            
+        } completion:^(BOOL finish){
+            
+            CGPoint testPinchPoint = [sender locationInView:self.view];
+
+
+            if (CGRectContainsPoint(dragRect, testPinchPoint)) {
+                UIImageView *imageView = (UIImageView*)[imageCell viewWithTag:11111];
+
+                static NSInteger index = 0;
+                UIImage *img= [UIImage imageNamed: index%2? @"3.png": @"5.png"];
+                imageView.image = img;
+                index ++;
+            }
+            
+        }];
     }
 }
 
