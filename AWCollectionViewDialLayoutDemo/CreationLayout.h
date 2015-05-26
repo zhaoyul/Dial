@@ -30,6 +30,9 @@ enum WheelAlignmentType : NSInteger {
 @property (readwrite, nonatomic, assign) CGFloat dialRadius;
 @property (readonly, nonatomic, strong) NSIndexPath *currentIndexPath;
 
+@property (readwrite, nonatomic, assign) CGSize imageSize;
+
+
 
 @property (nonatomic, assign) CGFloat pinchedCellScale;
 @property (nonatomic, assign) CGPoint pinchedCellCenter;

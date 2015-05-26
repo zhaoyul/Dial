@@ -47,7 +47,7 @@
 {
     [super prepareLayout];
 
-    self.cellCount = (int)[self.collectionView numberOfItemsInSection:0];
+    self.cellCount = (int)[self.collectionView numberOfItemsInSection:1];
     self.offset = -self.collectionView.contentOffset.y / self.itemHeight;
     
 }
@@ -63,10 +63,16 @@
     NSMutableArray *theLayoutAttributes = [[NSMutableArray alloc] init];
     
        for( int i = 0; i <= self.cellCount-1; i++ ){
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:1];
         UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [theLayoutAttributes addObject:theAttributes];
     }
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
+
+    [theLayoutAttributes addObject:theAttributes];
+
+
  
    
     return [theLayoutAttributes copy];
@@ -82,7 +88,18 @@
     return(theSize);
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewLayoutAttributes *)attributeForSecion0:(NSIndexPath *)indexPath
+{
+    UICollectionViewLayoutAttributes *theAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    
+    theAttributes.size = self.imageSize;
+    theAttributes.center = CGPointMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
+    
+    return theAttributes;
+}
+
+
+- (UICollectionViewLayoutAttributes *)attributeForSecion1:(NSIndexPath *)indexPath
 {
     double newIndex = (indexPath.item + self.offset);
     
@@ -123,9 +140,20 @@
     [self applyPinchToLayoutAttributes:theAttributes];
     
     if( self.AngularSpacing* newIndex > 260 || self.AngularSpacing * newIndex < -30){
-        theAttributes.center = CGPointMake(400, -200);
-    }else{
-        theAttributes.hidden = NO;
+        theAttributes.center = CGPointMake(-400, -200);
+    }
+    
+    return theAttributes;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewLayoutAttributes *theAttributes;
+    if (indexPath.section == 1) {
+        theAttributes = [self attributeForSecion1:indexPath];
+    } else {
+        theAttributes = [self attributeForSecion0:indexPath];
+
     }
     
     return(theAttributes);

@@ -15,6 +15,8 @@
 
 static NSString *cellId = @"cellId";
 static NSString *cellId2 = @"cellId2";
+static NSString *cellIdCloths = @"clothCell";
+
 
 
 @implementation ViewController{
@@ -44,6 +46,8 @@ static NSString *cellId2 = @"cellId2";
     
     [collectionView registerNib:[UINib nibWithNibName:@"dialCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:cellId];
     [collectionView registerNib:[UINib nibWithNibName:@"dialCell2" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:cellId2];
+    [collectionView registerNib:[UINib nibWithNibName:@"Cloths" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:cellIdCloths];
+
     
     
     UIPanGestureRecognizer* pinchRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
@@ -57,7 +61,6 @@ static NSString *cellId2 = @"cellId2";
     NSError *error;
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"materials" ofType:@"json"];
     NSString *jsonString = [[NSString alloc] initWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:NULL];
-    NSLog(@"jsonString:%@",jsonString);
     items = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     settingsView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-44)];
@@ -78,6 +81,8 @@ static NSString *cellId2 = @"cellId2";
     
     
     dialLayout = [[CreationLayout alloc] initWithRadius:radius andAngularSpacing:angularSpacing andCellSize:CGSizeMake(cell_width, cell_height) andAlignment:WHEELALIGNMENTCENTER andItemHeight:cell_height andXOffset:xOffset];
+    dialLayout.imageSize = CGSizeMake(500, 500);
+    
     [collectionView setCollectionViewLayout:dialLayout];
 
     [editBtn setTarget:self];
@@ -85,7 +90,10 @@ static NSString *cellId2 = @"cellId2";
     
     [self switchExample];
     
+    
+    
 }
+
 
 -(void)buildSettings{
     NSArray *viewArr = [[NSBundle mainBundle] loadNibNamed:@"iphone_settings_view" owner:self options:nil];
@@ -186,18 +194,25 @@ static NSString *cellId2 = @"cellId2";
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.items.count;
+    if (section == 0) {
+        return 1;
+    } else if (section == 1){
+        return self.items.count;
+    } else {
+        NSAssert(NO, @"shoule only have 2 secitons");
+        return 0;
+    }
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
+    return 2;
 }
 
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+- (UICollectionViewCell *)getCircleCellWithIndex:(NSIndexPath *)indexPath cv:(UICollectionView *)cv {
     UICollectionViewCell *cell;
     if(type == 0){
         cell = [cv dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
@@ -212,7 +227,7 @@ static NSString *cellId2 = @"cellId2";
     [nameLabel setText:playerName];
     
     
-    NSString *hexColor = [item valueForKey:@"team-color"];
+    NSString *hexColor = [item valueForKey:@"cloth-color"];
     
     
     if(type == 0){
@@ -243,7 +258,24 @@ static NSString *cellId2 = @"cellId2";
         
     }else{
         nameLabel.textColor = [self colorFromHex:hexColor];
-    }    
+    }
+    return cell;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell;
+    
+    if (indexPath.section == 0) {
+        cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"clothCell" forIndexPath:indexPath];
+        UIImageView *clothImageView = (UIImageView*)[cell viewWithTag:11111];
+        clothImageView.image = [UIImage imageNamed:@"3.png"];
+        cell.userInteractionEnabled = NO;
+        
+    } else if (indexPath.section == 1){
+        cell = [self getCircleCellWithIndex:indexPath cv:cv];
+
+    }
     
     
     return cell;
@@ -254,17 +286,7 @@ static NSString *cellId2 = @"cellId2";
 }
 
 
-#pragma mark - UICollectionViewDelegate methods
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(60, 60);
-}
-
-
-- (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0 , 0, 0, 0);
-}
+#pragma mark misc
 
 - (unsigned int)intFromHexString:(NSString *)hexStr
 {
@@ -296,6 +318,8 @@ static NSString *cellId2 = @"cellId2";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark gesture
 
 - (void)handlePinchGesture:(UIPanGestureRecognizer *)sender
 {
@@ -336,13 +360,12 @@ static NSString *cellId2 = @"cellId2";
     CGPoint initialPinchPoint = [touch locationInView:self.collectionView];
     NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
 
-    if (pinchedCellPath) {
+    if (pinchedCellPath && pinchedCellPath.section == 1) {
         return YES;
     }
     return NO;
 }
 
--collection
 
 
 @end
