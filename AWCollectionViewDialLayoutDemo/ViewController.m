@@ -39,6 +39,9 @@ static NSString *cellIdCloths = @"clothCell";
     UICollectionViewCell * imageCell;
     CAShapeLayer *circleShapeLayer;
     CGRect dragRect;
+    CAShapeLayer *maskLayer;
+    CABasicAnimation *maskAnimation;
+    CALayer *snopShotLayer;
 }
 
 @synthesize collectionView, items, editBtn;
@@ -387,13 +390,42 @@ static NSString *cellIdCloths = @"clothCell";
             if (CGRectContainsPoint(dragRect, testPinchPoint)) {
                 UIImageView *imageView = (UIImageView*)[imageCell viewWithTag:11111];
 
+                maskLayer = [CAShapeLayer layer];
+                
+                maskLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(imageView.bounds, 0, 0)].CGPath;
+                
+                
+                
+                maskAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
+                maskAnimation.fromValue = (__bridge id)([UIBezierPath bezierPathWithOvalInRect:CGRectInset(imageView.bounds, 200, 200)].CGPath);
+                maskAnimation.toValue = (__bridge id)([UIBezierPath bezierPathWithOvalInRect:CGRectInset(imageView.bounds, 0, 0)].CGPath);
+                maskAnimation.duration = 3;
+//                maskLayer.fillColor = [UIColor colorWithWhite:1.0 alpha:1.0].CGColor;
+                imageView.layer.mask = maskLayer;
+                maskAnimation.delegate = self;
+
+                [maskLayer addAnimation:maskAnimation forKey:@"path"];
+                
+                maskAnimation.delegate = self;
+                
                 static NSInteger index = 0;
+    
                 UIImage *img= [UIImage imageNamed: index%2? @"3.png": @"5.png"];
+                
+                snopShotLayer = [CALayer layer];
+                snopShotLayer.contents = (__bridge id)([UIImage imageNamed: (index+1)%2? @"3.png": @"5.png"].CGImage);
+                snopShotLayer.frame = imageView.bounds;
+                [imageCell.contentView.layer insertSublayer:snopShotLayer below: imageView.layer];
+                
+                
+                
                 imageView.image = img;
                 index ++;
             }
             
         }];
+        
+        
     }
 }
 
@@ -415,6 +447,15 @@ static NSString *cellIdCloths = @"clothCell";
     return NO;
 }
 
+#pragma mark CoreAnimation
 
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    [maskLayer removeFromSuperlayer];
+    [snopShotLayer removeFromSuperlayer];
+}
+
+-(void)animationDidStart:(CAAnimation *)anim{
+    NSLog(@"animation start");
+}
 
 @end
