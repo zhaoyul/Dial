@@ -5,8 +5,8 @@
 //  Created by Kevin Li on 2015.05.20.
 //  Copyright (c) 2014 Kevin Li. All rights reserved.
 //
-//  
-//  
+//
+//
 //
 
 #import "CreationLayout.h"
@@ -19,20 +19,18 @@
 {
     if ((self = [super init]) != NULL)
     {
-		[self setup];
+        [self setup];
     }
     return self;
 }
 
--(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOff{
+-(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andItemHeight:(CGFloat)height {
     if ((self = [super init]) != NULL)
     {
-        self.dialRadius = radius;//420.0f;
-        self.cellSize = cell;//(CGSize){ 220.0f, 80.0f };
+        self.dialRadius = radius;
+        self.cellSize = cell;
         self.itemHeight = height;
-        self.AngularSpacing = spacing;//8.0f;
-        self.xOffset = xOff;
-        self.wheelType = alignment;
+        self.AngularSpacing = spacing;
         [self setup];
     }
     return self;
@@ -40,14 +38,14 @@
 
 - (void)setup
 {
-    self.offset = 0.0f;    
+    self.offset = 0.0f;
 }
 
 - (void)prepareLayout
 {
     [super prepareLayout];
-
-    self.cellCount = (int)[self.collectionView numberOfItemsInSection:1];
+    
+    self.circleCellCount = (int)[self.collectionView numberOfItemsInSection:1];
     self.offset = -self.collectionView.contentOffset.y / self.itemHeight;
     
 }
@@ -62,101 +60,84 @@
 {
     NSMutableArray *theLayoutAttributes = [[NSMutableArray alloc] init];
     
-       for( int i = 0; i <= self.cellCount-1; i++ ){
+    for( int i = 0; i <= self.circleCellCount-1; i++ ){
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:1];
         UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
         [theLayoutAttributes addObject:theAttributes];
     }
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
     UICollectionViewLayoutAttributes *theAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
-
+    
     [theLayoutAttributes addObject:theAttributes];
-
-
- 
-   
+    
     return [theLayoutAttributes copy];
 }
 
 
 - (CGSize)collectionViewContentSize
 {
+    
+#define LAST_ELEMENT_NUMBER 6
     const CGSize theSize = {
         .width = self.collectionView.bounds.size.width,
-        .height = (self.cellCount-1) * self.itemHeight + self.collectionView.bounds.size.height,
+        .height = (self.circleCellCount-LAST_ELEMENT_NUMBER) * self.itemHeight +
+        self.collectionView.bounds.size.height,
     };
     return(theSize);
 }
 
-- (UICollectionViewLayoutAttributes *)attributeForSecion0:(NSIndexPath *)indexPath
+- (UICollectionViewLayoutAttributes *)attributeForClothSecion:(NSIndexPath *)indexPath
 {
-    UICollectionViewLayoutAttributes *theAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    UICollectionViewLayoutAttributes *resultAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    theAttributes.size = self.imageSize;
-    theAttributes.center = CGPointMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
+    resultAttributes.size = self.imageSize;
+    resultAttributes.center = CGPointMake(self.collectionView.bounds.size.width/2, self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
     
-    return theAttributes;
+    return resultAttributes;
 }
 
 
-- (UICollectionViewLayoutAttributes *)attributeForSecion1:(NSIndexPath *)indexPath
+- (UICollectionViewLayoutAttributes *)attributeForCircleSecion:(NSIndexPath *)indexPath
 {
-    double newIndex = (indexPath.item + self.offset);
+    double currentIndex = (indexPath.item + self.offset);
     
-    UICollectionViewLayoutAttributes *theAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    UICollectionViewLayoutAttributes *resultAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    theAttributes.size = self.cellSize;
-    float scaleFactor;
-    float deltaX;
+    resultAttributes.size = self.cellSize;
     CGAffineTransform translationT;
-    CGAffineTransform rotationT = CGAffineTransformMakeRotation(self.AngularSpacing* newIndex *M_PI/180);
-    if(indexPath.item == 3){
-        NSLog(@"angle 3 :%f", self.AngularSpacing* newIndex);
+    CGAffineTransform rotationT = CGAffineTransformMakeRotation(self.AngularSpacing* currentIndex *M_PI/180);
+    
+    
+    
+    resultAttributes.center = CGPointMake(self.collectionView.bounds.size.width/2  , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
+    translationT =CGAffineTransformMakeTranslation(self.dialRadius , 0);
+    
+    resultAttributes.transform =  CGAffineTransformConcat(translationT, rotationT);
+    resultAttributes.zIndex = indexPath.item;
+    
+    
+    [self applyPinchToLayoutAttributes:resultAttributes];
+    
+#define VERY_FAR CGPointMake(1000000, 1000000)
+    
+    if( self.AngularSpacing* currentIndex > 260 || self.AngularSpacing * currentIndex < -30){
+        resultAttributes.center = VERY_FAR;
     }
     
-    
-    if( self.wheelType == WHEELALIGNMENTLEFT){
-        scaleFactor = fmax(1, 1 - fabs( newIndex *0.25));
-        deltaX = self.cellSize.width/2;
-        theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset  , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
-        translationT =CGAffineTransformMakeTranslation(self.dialRadius + (deltaX*scaleFactor) , 0);
-    }else  {
-        scaleFactor = fmax(0.4, 1 - fabs( newIndex *0.50));
-        deltaX =  self.collectionView.bounds.size.width/2;
-        theAttributes.center = CGPointMake(-self.dialRadius + self.xOffset , self.collectionView.bounds.size.height/2 + self.collectionView.contentOffset.y);
-        translationT =CGAffineTransformMakeTranslation(self.dialRadius  + ((1 - scaleFactor) * -30) , 0);
-    }
-    
-    
-    
-    CGAffineTransform scaleT = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
-    theAttributes.alpha = scaleFactor;
-    
-    
-    theAttributes.transform = CGAffineTransformConcat(scaleT, CGAffineTransformConcat(translationT, rotationT));
-    theAttributes.zIndex = indexPath.item;
-    
-    
-    [self applyPinchToLayoutAttributes:theAttributes];
-    
-    if( self.AngularSpacing* newIndex > 260 || self.AngularSpacing * newIndex < -30){
-        theAttributes.center = CGPointMake(-400, -200);
-    }
-    
-    return theAttributes;
+    return resultAttributes;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewLayoutAttributes *theAttributes;
+    UICollectionViewLayoutAttributes *resultAttributes;
     if (indexPath.section == 1) {
-        theAttributes = [self attributeForSecion1:indexPath];
+        resultAttributes = [self attributeForCircleSecion:indexPath];
     } else {
-        theAttributes = [self attributeForSecion0:indexPath];
-
+        resultAttributes = [self attributeForClothSecion:indexPath];
+        
     }
     
-    return(theAttributes);
+    return(resultAttributes);
 }
 
 -(void)setPinchedCellScale:(CGFloat)scale

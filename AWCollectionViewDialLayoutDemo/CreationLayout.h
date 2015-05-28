@@ -19,7 +19,7 @@ enum WheelAlignmentType : NSInteger {
     WHEELALIGNMENTCENTER
 };
 
-@property (readwrite, nonatomic, assign) int cellCount;
+@property (readwrite, nonatomic, assign) int circleCellCount;
 @property (readwrite, nonatomic, assign) int wheelType;
 @property (readwrite, nonatomic, assign) CGPoint center;
 @property (readwrite, nonatomic, assign) CGFloat offset;
@@ -39,5 +39,5 @@ enum WheelAlignmentType : NSInteger {
 @property (nonatomic, strong) NSIndexPath* pinchedCellPath;
 
 
--(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andAlignment:(WheelAlignmentType)alignment andItemHeight:(CGFloat)height andXOffset: (CGFloat) xOffset;
+-(id)initWithRadius: (CGFloat) radius andAngularSpacing: (CGFloat) spacing andCellSize: (CGSize) cell andItemHeight:(CGFloat)height;
 @end

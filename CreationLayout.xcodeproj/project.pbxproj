@@ -17,10 +17,8 @@
 		71D04A2118D3068F0077B38B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A2018D3068F0077B38B /* ViewController.m */; };
 		71D04A2318D3068F0077B38B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A2218D3068F0077B38B /* Images.xcassets */; };
 		71D04A4218D306A30077B38B /* CreationLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D04A4118D306A30077B38B /* CreationLayout.m */; };
-		71D04A4418D309C40077B38B /* dialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4318D309C40077B38B /* dialCell.xib */; };
+		71D04A4418D309C40077B38B /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4318D309C40077B38B /* CircleCell.xib */; };
 		71D04A4618D311190077B38B /* materials.json in Resources */ = {isa = PBXBuildFile; fileRef = 71D04A4518D311190077B38B /* materials.json */; };
-		71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD0C6318D3540400152D0C /* iphone_settings_view.xib */; };
-		71DD223918D879A1005450FA /* dialCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DD223818D879A1005450FA /* dialCell2.xib */; };
 		D58880C71B1476FE002835B6 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = D58880C61B1476FE002835B6 /* 5.png */; };
 		D59AD1901B141E7C009C4609 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = D59AD18E1B141E7C009C4609 /* 3.png */; };
 		D59AD1911B141E7C009C4609 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = D59AD18F1B141E7C009C4609 /* 4.png */; };
@@ -53,10 +51,8 @@
 		71D04A2918D3068F0077B38B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		71D04A4018D306A30077B38B /* CreationLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationLayout.h; sourceTree = "<group>"; };
 		71D04A4118D306A30077B38B /* CreationLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationLayout.m; sourceTree = "<group>"; };
-		71D04A4318D309C40077B38B /* dialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell.xib; sourceTree = "<group>"; };
+		71D04A4318D309C40077B38B /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
 		71D04A4518D311190077B38B /* materials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = materials.json; sourceTree = "<group>"; };
-		71DD0C6318D3540400152D0C /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
-		71DD223818D879A1005450FA /* dialCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dialCell2.xib; sourceTree = "<group>"; };
 		D58880C61B1476FE002835B6 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		D59AD18E1B141E7C009C4609 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		D59AD18F1B141E7C009C4609 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -123,13 +119,11 @@
 				71D04A1918D3068F0077B38B /* Main_iPhone.storyboard */,
 				71D04A1F18D3068F0077B38B /* ViewController.h */,
 				71D04A2018D3068F0077B38B /* ViewController.m */,
-				71D04A4318D309C40077B38B /* dialCell.xib */,
-				71DD223818D879A1005450FA /* dialCell2.xib */,
+				71D04A4318D309C40077B38B /* CircleCell.xib */,
 				D5C1C95B1B143AAB009F7E3E /* Cloths.xib */,
 				71D04A4518D311190077B38B /* materials.json */,
 				71D04A2218D3068F0077B38B /* Images.xcassets */,
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
-				71DD0C6318D3540400152D0C /* iphone_settings_view.xib */,
 			);
 			name = CreationLayoutDemo;
 			path = AWCollectionViewDialLayoutDemo;
@@ -238,14 +232,12 @@
 				D59AD1911B141E7C009C4609 /* 4.png in Resources */,
 				D5D198CA1B12E2D600092801 /* small-7.jpeg in Resources */,
 				D5D198C31B12E2D600092801 /* small-0.jpeg in Resources */,
-				71DD0C6418D3540400152D0C /* iphone_settings_view.xib in Resources */,
 				D5D198C81B12E2D600092801 /* small-5.jpeg in Resources */,
 				D5D198C71B12E2D600092801 /* small-4.jpeg in Resources */,
-				71D04A4418D309C40077B38B /* dialCell.xib in Resources */,
+				71D04A4418D309C40077B38B /* CircleCell.xib in Resources */,
 				71D04A4618D311190077B38B /* materials.json in Resources */,
 				D59AD1901B141E7C009C4609 /* 3.png in Resources */,
 				71D04A2318D3068F0077B38B /* Images.xcassets in Resources */,
-				71DD223918D879A1005450FA /* dialCell2.xib in Resources */,
 				71D04A1B18D3068F0077B38B /* Main_iPhone.storyboard in Resources */,
 				D5C1C95C1B143AAB009F7E3E /* Cloths.xib in Resources */,
 				71D04A1218D3068F0077B38B /* InfoPlist.strings in Resources */,

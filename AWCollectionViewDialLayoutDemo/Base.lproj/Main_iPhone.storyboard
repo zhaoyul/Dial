@@ -35,17 +35,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNO-Xo-JY0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.70588235290000001" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.70588235290000001" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="造物动画" id="D58-ao-gGM">
-                                        <barButtonItem key="rightBarButtonItem" title="参数" style="plain" id="GMJ-pP-5Mf">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="造物动画" id="D58-ao-gGM"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -64,7 +60,6 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="9M6-aW-M6X" id="Ixx-GR-ka1"/>
-                        <outlet property="editBtn" destination="GMJ-pP-5Mf" id="U8V-dH-Pro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
