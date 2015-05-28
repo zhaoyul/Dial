@@ -126,7 +126,7 @@
 				71D04A0E18D3068F0077B38B /* Supporting Files */,
 			);
 			name = CreationLayoutDemo;
-			path = AWCollectionViewDialLayoutDemo;
+			path = CreationLayout;
 			sourceTree = "<group>";
 		};
 		71D04A0E18D3068F0077B38B /* Supporting Files */ = {
@@ -183,7 +183,7 @@
 			dependencies = (
 			);
 			name = CreationLayout;
-			productName = AWCollectionViewDialLayoutDemo;
+			productName = CreationLayout;
 			productReference = 71D04A0418D3068F0077B38B /* CreationLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -360,8 +360,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/CreationLayout-Prefix.pch";
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/CreationLayout-Info.plist";
+				GCC_PREFIX_HEADER = "CreationLayout/CreationLayout-Prefix.pch";
+				INFOPLIST_FILE = "CreationLayout/CreationLayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = CreationLayout;
 				PROVISIONING_PROFILE = "";
@@ -378,8 +378,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AWCollectionViewDialLayoutDemo/CreationLayout-Prefix.pch";
-				INFOPLIST_FILE = "AWCollectionViewDialLayoutDemo/CreationLayout-Info.plist";
+				GCC_PREFIX_HEADER = "CreationLayout/CreationLayout-Prefix.pch";
+				INFOPLIST_FILE = "CreationLayout/CreationLayout-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = CreationLayout;
 				PROVISIONING_PROFILE = "";
